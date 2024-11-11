@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact </title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0 10px;
+            color: white;
+        }
+
+        body::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: url(bg-mountain.jpg);
+            background-position: center;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .wrapper{
+            width: 450px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 30px;
+        }
+
+        form{
+           display: flex;
+           flex-direction: column;
+        }
+
+        h2{
+           font-size: 26px;
+           font-weight: bold;
+           margin-bottom: 20px;
+           color: #fff;
+        }
+
+        .child{
+            position: relative;
+            border-bottom: 2px solid #ccc;
+            margin: 15px 0;
+
+        } 
+
+        .child label{
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            left: 0;
+            font-size: 16px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            transition:  0.15s ease;
+        }
+
+        .child input{
+            font-size: 16px;
+            width: 100%;
+            height: 40px;
+            border: none;
+            color: #fff;
+            outline: none;
+            background: transparent;
+        }
+         
+        .child input:hover~label,
+        .child input:focus~label,
+        .child input:valid~label{
+            top: 10px;
+            font-size: 0.8rem;
+            transform: translateY(-120%);
+
+        }
+
+        .forget{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .forget label{
+            display: flex;
+            align-items: center;
+        }
+
+        .forget p{
+              margin-left: 8px;
+        }
+
+        .forget a{
+            color: #fff;
+            text-decoration: underline;
+        }
+     
+        .a{
+            padding: 10px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            color: black;
+            text-decoration: none;
+            background-color: #fff;
+            margin: 30px 0;
+            cursor: pointer;
+            transition: 1s ease-in-out;
+        }
+
+        .register{
+            text-align: center;
+            color: #fff;
+        }
+
+        .register a{
+            color: #fff;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <h2>Welcome</h2>
+            <div class="child">
+                <input type="text" id="Your-Name">
+                <label for="Your-Name">Your-Name</label>
+            </div>
+            <div class="child">
+                <input type="password" id="password">
+                <label for="password">Password</label>
+            </div>
+            <div class="child">
+               <input type="email" id="email">
+               <label for="Email">Enter Your Email</label>    
+            </div>
+            <div class="forget">
+                <label for="Forget-your-password">
+                    <input type="checkbox" id="Forget-your-password">
+                    <p>Remember Me</p>
+                </label>
+                <a href="#">Forget password?</a>                
+            </div>
+            
+             <a class="a" target="_blank" href="for-NOVASTAR.html">Log in</a>
+
+            <div class="register">
+                <p>You don't have acoount?
+                    <a href="#">Register</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
